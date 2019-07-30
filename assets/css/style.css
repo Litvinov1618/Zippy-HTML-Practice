@@ -1,0 +1,216 @@
+@font-face {
+  font-family: 'Helvetica';
+  src: url("fonts/Helvetica.ttf"); }
+
+@font-face {
+  font-family: 'MotserratBold';
+  font-style: normal;
+  font-weight: 700;
+  src: url("fonts/Montserrat-Bold.ttf"); }
+
+@font-face {
+  font-family: 'Motserrat';
+  font-style: normal;
+  font-weight: normal;
+  src: url("fonts/Montserrat-Bold.ttf"); }
+
+@font-face {
+  font-family: 'RobotoThin';
+  font-style: normal;
+  font-weight: 100;
+  src: url("fonts/Roboto-Thin.ttf"); }
+
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+.container {
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 0 8px; }
+
+header {
+  height: 100vh;
+  background: url("../img/backgrounds/background-1.jpg") center no-repeat;
+  background-size: cover; }
+
+.navigation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-top: 40px;
+  color: #fff;
+  text-transform: uppercase;
+  font-family: "MotserratBold", sans-serif; }
+  .navigation .logo {
+    font-size: 30px;
+    font-weight: bold; }
+  .navigation .menu a {
+    text-decoration: none;
+    color: inherit;
+    text-transform: uppercase;
+    margin-right: 20px;
+    font-size: 13px;
+    -webkit-transition: color 0.2s linear;
+    -o-transition: color 0.2s linear;
+    transition: color 0.2s linear; }
+    .navigation .menu a:hover {
+      color: #ffe26d; }
+
+.btn {
+  background-color: #ffe26d;
+  color: black;
+  display: inline-block;
+  padding: 1em 1.5em;
+  border-radius: 3px;
+  text-transform: uppercase;
+  font-size: 11px;
+  text-align: center;
+  text-decoration: none;
+  -webkit-transition: background-color 0.2s linear, color 0.2s linear;
+  -o-transition: background-color 0.2s linear, color 0.2s linear;
+  transition: background-color 0.2s linear, color 0.2s linear;
+  font-family: "MotserratBold", sans-serif; }
+  .btn:hover {
+    background-color: #62497c;
+    color: white;
+    display: inline-block;
+    padding: 1em 1.5em;
+    border-radius: 3px;
+    text-transform: uppercase;
+    font-size: 11px;
+    text-align: center;
+    text-decoration: none;
+    -webkit-transition: background-color 0.2s linear, color 0.2s linear;
+    -o-transition: background-color 0.2s linear, color 0.2s linear;
+    transition: background-color 0.2s linear, color 0.2s linear;
+    font-family: "MotserratBold", sans-serif; }
+
+.header-inner {
+  width: 490px;
+  height: 245px;
+  margin-top: 132px;
+  color: white; }
+  .header-inner h1 {
+    font-size: 41px;
+    margin-bottom: 35px;
+    font-family: "MotserratBold", sans-serif; }
+  .header-inner p {
+    font-size: 21px;
+    margin-bottom: 35px;
+    font-family: "RobotoThin", sans-serif; }
+
+.slider {
+  position: absolute;
+  left: 7px;
+  bottom: 38px; }
+  .slider .fa-circle {
+    color: white;
+    font-size: 7px;
+    opacity: 0.5;
+    cursor: pointer; }
+  .slider .active {
+    opacity: 1; }
+
+.container-header {
+  position: relative;
+  height: 100vh; }
+
+.section-header {
+  margin: 90px auto 88px auto;
+  color: black;
+  font-family: "MotserratBold", sans-serif;
+  font-size: 44px;
+  text-align: center; }
+
+.welcome-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin-bottom: 75px; }
+  .welcome-content .welcome-text {
+    font-size: 30px;
+    font-family: "RobotoThin", sans-serif;
+    width: 420px; }
+  .welcome-content .welcome-umbrella img {
+    width: 100%;
+    max-width: 188px;
+    height: auto; }
+
+.service {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  border-bottom: 2px solid #e7e7e7;
+  padding-bottom: 58px; }
+  .service .service-item {
+    text-align: center;
+    width: 22%; }
+    .service .service-item .service-name {
+      margin-bottom: 30px;
+      font-size: 14px;
+      font-family: "MotserratBold", sans-serif;
+      color: #62497c; }
+    .service .service-item p {
+      margin-bottom: 35px;
+      font-family: "Helvetica", sans-serif;
+      font-size: 13px;
+      color: #a3a3a3; }
+    .service .service-item .service-img {
+      display: block;
+      margin: 0 auto 35px auto; }
+
+.projects-header {
+  margin: 60px 47px; }
+
+.projects {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+  .projects .project-item {
+    width: 25%;
+    background-color: #efefef; }
+    .projects .project-item img {
+      width: 100%;
+      height: auto;
+      max-width: 337px;
+      display: block; }
+    .projects .project-item .item-text {
+      padding: 2.5em;
+      -webkit-transition: background-color 0.2s linear;
+      -o-transition: background-color 0.2s linear;
+      transition: background-color 0.2s linear; }
+      .projects .project-item .item-text:hover {
+        background-color: #ffe26d; }
+      .projects .project-item .item-text:hover .btn {
+        background-color: #62497c;
+        color: white; }
+      .projects .project-item .item-text .project-name {
+        font-family: "MotserratBold", sans-serif;
+        font-size: 15px;
+        margin-bottom: 18px; }
+      .projects .project-item .item-text p {
+        margin-bottom: 18px;
+        font-size: 13px;
+        font-family: "Helvetica", sans-serif;
+        color: #878787; }

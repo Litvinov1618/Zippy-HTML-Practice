@@ -1,0 +1,245 @@
+// AAAAAW SHIT, HERE WE GO AGAIN...
+
+// COLLORS
+$yel: #ffe26d;
+$pur: #62497c;
+$blc: #323232;
+
+// FONTS
+@import 'fonts';
+
+$mon: 'Motserrat', sans-serif;
+$monbold: 'MotserratBold', sans-serif;
+$robthin: 'RobotoThin', sans-serif;
+$hel: 'Helvetica', sans-serif;
+
+//MIXINS
+@mixin link {
+	text-decoration: none;
+	color: inherit;
+	text-transform: uppercase;
+}
+
+@mixin btn ($color, $bcg) {
+	background-color: $bcg;
+	color: $color;
+	display: inline-block;
+	// padding: 17px 25px;
+	padding: 1em 1.5em;
+	border-radius: 3px; 
+	text-transform: uppercase;
+	font-size: 11px;
+	text-align: center;
+	text-decoration: none;
+	transition: background-color 0.2s linear, color 0.2s linear;
+	font-family: $monbold;
+	
+
+}
+@mixin bot {
+	margin-bottom: 35px;
+}
+
+// CSS
+
+// BASIC CSS
+*,
+*:before,
+*:after {
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+            box-sizing: border-box;
+}
+.container {
+	width: 100%;
+	max-width: 700px;
+	margin: 0 auto;
+	padding: 0 8px;
+}
+
+// HEADER
+header {
+	height: 100vh;
+	background: url('../img/backgrounds/background-1.jpg') center no-repeat;
+	background-size: cover;
+}
+.navigation {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding-top: 40px;
+	color: #fff;
+	text-transform: uppercase;
+	font-family: $monbold;
+	
+	.logo {
+		font-size: 30px;
+		font-weight: bold;
+	}
+	.menu a {
+		@include link;
+		margin-right: 20px;
+		font-size: 13px;
+		transition: color 0.2s linear;
+		
+		&:hover {
+			color: $yel;
+		}
+	}
+}
+
+.btn {
+	@include btn(black, $yel);
+
+	&:hover {
+		@include btn(white, $pur);
+	}
+}
+
+.header-inner {
+	width: 490px;
+	height: 245px;
+	margin-top: 132px;
+	color: white;
+
+
+	h1 {
+		font-size: 41px;
+		@include bot;
+		font-family: $monbold;
+	}
+	p {
+		font-size: 21px;
+		@include bot;
+		font-family: $robthin;
+	}
+}
+.slider {
+	position: absolute;
+	left: 7px;
+	bottom: 38px;
+	.fa-circle {
+		color: white;
+		font-size: 7px;
+		opacity: 0.5;
+		cursor: pointer;
+	}
+	.active {
+			opacity: 1;
+		}
+}
+
+.container-header {
+	position: relative;
+	height: 100vh;
+}
+
+// WELCOME TO ZIPPY
+.section-header {
+	margin: 90px auto 88px auto;
+	color: black;
+	font-family: $monbold;
+	font-size: 44px;
+	text-align: center;
+}
+.welcome-content {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 75px; 
+	.welcome-text {
+		font-size: 30px;
+		font-family: $robthin;
+		width: 420px;
+	}
+	.welcome-umbrella img{
+		width: 100%;
+		max-width: 188px;
+		height: auto;
+	}
+}
+.service {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	border-bottom: 2px solid #e7e7e7;
+	padding-bottom: 58px;
+	
+
+	
+	.service-item {
+		text-align: center;
+		width: 22%;
+
+		.service-name {
+			margin-bottom: 30px;
+			font-size: 14px;
+			font-family: $monbold;
+			color: $pur;
+
+		}
+		p {
+			@include bot;
+			font-family: $hel;
+			font-size: 13px;
+			color: #a3a3a3; 
+			
+		}
+		.service-img {
+			display: block;
+			margin: 0 auto 35px auto;
+		}
+	}
+}
+
+// PROJECTS
+.projects-header {
+		margin: 60px 47px;
+	}
+
+.projects {
+	display: flex;
+
+
+	
+	.project-item {
+
+		width: 25%;
+		background-color: #efefef;
+
+		img {
+			width: 100%;
+			height: auto;
+			max-width: 337px;
+			display: block;
+		}
+		.item-text {
+			padding: 2.5em;
+			transition: background-color 0.2s linear;
+
+			&:hover {
+				background-color: $yel;
+
+			}
+			&:hover .btn{
+				background-color: $pur;
+				color: white;
+			}
+
+
+			.project-name {
+				font-family: $monbold;
+				font-size: 15px;
+				margin-bottom: 18px;
+			}
+
+			p {
+				margin-bottom: 18px;
+				font-size: 13px;
+				font-family: $hel;
+				color: #878787;
+			}
+		}
+	}
+}
