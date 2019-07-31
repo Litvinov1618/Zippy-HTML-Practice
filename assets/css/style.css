@@ -25,8 +25,8 @@
 *:after {
   margin: 0;
   padding: 0;
-  -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 
 .container {
@@ -34,6 +34,9 @@
   max-width: 700px;
   margin: 0 auto;
   padding: 0 8px; }
+
+li {
+  list-style: none; }
 
 header {
   height: 100vh;
@@ -73,7 +76,7 @@ header {
   background-color: #ffe26d;
   color: black;
   display: inline-block;
-  padding: 1em 1.5em;
+  padding: 15px 13px;
   border-radius: 3px;
   text-transform: uppercase;
   font-size: 11px;
@@ -87,7 +90,7 @@ header {
     background-color: #62497c;
     color: white;
     display: inline-block;
-    padding: 1em 1.5em;
+    padding: 15px 13px;
     border-radius: 3px;
     text-transform: uppercase;
     font-size: 11px;
@@ -170,7 +173,8 @@ header {
       margin-bottom: 30px;
       font-size: 14px;
       font-family: "MotserratBold", sans-serif;
-      color: #62497c; }
+      color: #62497c;
+      text-transform: uppercase; }
     .service .service-item p {
       margin-bottom: 35px;
       font-family: "Helvetica", sans-serif;
@@ -193,7 +197,6 @@ header {
     .projects .project-item img {
       width: 100%;
       height: auto;
-      max-width: 337px;
       display: block; }
     .projects .project-item .item-text {
       padding: 2.5em;
@@ -201,16 +204,66 @@ header {
       -o-transition: background-color 0.2s linear;
       transition: background-color 0.2s linear; }
       .projects .project-item .item-text:hover {
-        background-color: #ffe26d; }
+        background-color: #ffe26d;
+        cursor: pointer; }
       .projects .project-item .item-text:hover .btn {
         background-color: #62497c;
         color: white; }
       .projects .project-item .item-text .project-name {
         font-family: "MotserratBold", sans-serif;
         font-size: 15px;
-        margin-bottom: 18px; }
+        margin-bottom: 18px;
+        text-transform: uppercase; }
       .projects .project-item .item-text p {
         margin-bottom: 18px;
         font-size: 13px;
         font-family: "Helvetica", sans-serif;
         color: #878787; }
+
+.plan {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+  .plan .plan-item {
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    text-align: center;
+    width: 236px; }
+  .plan .plan-item + .plan-item {
+    border-left: 2px solid #e7e7e7; }
+  .plan .plan-name {
+    font-family: "MotserratBold", sans-serif;
+    font-size: 15px;
+    margin-bottom: 22px; }
+  .plan .plan-cost {
+    font-family: "Motserrat", sans-serif;
+    color: #9d9d9d;
+    margin-bottom: 23px; }
+  .plan li {
+    font-size: 13px;
+    font-family: "Helvetica", sans-serif;
+    margin-bottom: 12px; }
+  .plan ul {
+    margin-bottom: 27px; }
+  .plan .btn {
+    padding: 9px 29px; }
+
+.video-sec {
+  background-color: #62497c;
+  width: 100%; }
+  .video-sec .video-header {
+    color: white;
+    padding-top: 90px;
+    margin-bottom: 50px; }
+  .video-sec video {
+    outline: none;
+    width: 688px;
+    height: 460px; }
+  .video-sec .video-title {
+    font-size: 11px;
+    font-family: "MotserratBold", sans-serif;
+    text-transform: uppercase;
+    color: white;
+    margin: 25px 0 110px 0;
+    display: inline-block; }

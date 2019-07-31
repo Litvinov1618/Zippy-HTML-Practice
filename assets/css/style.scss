@@ -24,8 +24,7 @@ $hel: 'Helvetica', sans-serif;
 	background-color: $bcg;
 	color: $color;
 	display: inline-block;
-	// padding: 17px 25px;
-	padding: 1em 1.5em;
+	padding: 15px 13px;
 	border-radius: 3px; 
 	text-transform: uppercase;
 	font-size: 11px;
@@ -33,12 +32,12 @@ $hel: 'Helvetica', sans-serif;
 	text-decoration: none;
 	transition: background-color 0.2s linear, color 0.2s linear;
 	font-family: $monbold;
-	
-
 }
+
 @mixin bot {
 	margin-bottom: 35px;
 }
+
 
 // CSS
 
@@ -48,9 +47,8 @@ $hel: 'Helvetica', sans-serif;
 *:after {
 	margin: 0;
 	padding: 0;
-	-webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
-            box-sizing: border-box;
+    box-sizing: border-box;
 }
 .container {
 	width: 100%;
@@ -58,7 +56,9 @@ $hel: 'Helvetica', sans-serif;
 	margin: 0 auto;
 	padding: 0 8px;
 }
-
+li {
+	list-style: none;
+}
 // HEADER
 header {
 	height: 100vh;
@@ -104,7 +104,6 @@ header {
 	margin-top: 132px;
 	color: white;
 
-
 	h1 {
 		font-size: 41px;
 		@include bot;
@@ -120,6 +119,7 @@ header {
 	position: absolute;
 	left: 7px;
 	bottom: 38px;
+	
 	.fa-circle {
 		color: white;
 		font-size: 7px;
@@ -148,11 +148,13 @@ header {
 	display: flex;
 	justify-content: space-between;
 	margin-bottom: 75px; 
+	
 	.welcome-text {
 		font-size: 30px;
 		font-family: $robthin;
 		width: 420px;
 	}
+	
 	.welcome-umbrella img{
 		width: 100%;
 		max-width: 188px;
@@ -166,8 +168,6 @@ header {
 	border-bottom: 2px solid #e7e7e7;
 	padding-bottom: 58px;
 	
-
-	
 	.service-item {
 		text-align: center;
 		width: 22%;
@@ -177,15 +177,16 @@ header {
 			font-size: 14px;
 			font-family: $monbold;
 			color: $pur;
-
+			text-transform: uppercase;
 		}
+		
 		p {
 			@include bot;
 			font-family: $hel;
 			font-size: 13px;
-			color: #a3a3a3; 
-			
+			color: #a3a3a3; 	
 		}
+		
 		.service-img {
 			display: block;
 			margin: 0 auto 35px auto;
@@ -201,26 +202,24 @@ header {
 .projects {
 	display: flex;
 
-
-	
 	.project-item {
-
 		width: 25%;
 		background-color: #efefef;
 
 		img {
 			width: 100%;
 			height: auto;
-			max-width: 337px;
 			display: block;
 		}
+		
 		.item-text {
 			padding: 2.5em;
 			transition: background-color 0.2s linear;
 
-			&:hover {
+			&:hover
+			{
 				background-color: $yel;
-
+				cursor: pointer;
 			}
 			&:hover .btn{
 				background-color: $pur;
@@ -232,6 +231,7 @@ header {
 				font-family: $monbold;
 				font-size: 15px;
 				margin-bottom: 18px;
+				text-transform: uppercase;
 			}
 
 			p {
@@ -243,3 +243,69 @@ header {
 		}
 	}
 }
+// PLAN
+.plan {
+	display: flex;
+
+	.plan-item {
+		justify-content: space-between;
+		text-align: center;
+		width: 236px;
+	}
+		.plan-item + .plan-item {
+			border-left: 2px solid #e7e7e7;
+		}
+		.plan-name {
+			font-family: $monbold;
+			font-size: 15px;
+			margin-bottom: 22px;
+		}
+		.plan-cost {
+			font-family: $mon;
+			color: #9d9d9d;
+			margin-bottom: 23px;
+		}
+		li {
+			font-size: 13px;
+			font-family: $hel;
+			margin-bottom: 12px;
+		}
+		ul {
+		margin-bottom: 27px;
+		}
+		.btn {
+			padding: 9px 29px;
+		}
+}
+
+// VIDEO PROJECTS
+
+.video-sec {
+	background-color: $pur;
+
+	
+	width: 100%;
+
+	.video-header {
+		color: white;
+		padding-top: 90px;
+		margin-bottom: 50px;
+	}
+
+	video {
+		outline: none;
+		width: 688px;
+		height: 460px;
+	}
+	.video-title {
+		font-size: 11px;
+		font-family: $monbold;
+		text-transform: uppercase;
+		color: white;
+		margin: 25px 0 110px 0;
+		display: inline-block;
+	}
+}
+
+
+
