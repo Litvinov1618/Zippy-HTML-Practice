@@ -6,8 +6,8 @@
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>Zippy</title>
 	<link rel="stylesheet" href="assets/css/style.css">
-	<link href="https://fonts.googleapis.com/css?family=Montserrat:700|Roboto:100,400,700&display=swap" rel="stylesheet">
 	<script src="https://kit.fontawesome.com/9c3bd6fc0b.js"></script>
+
 </head>
 <body>
 	<header>
@@ -33,17 +33,17 @@
 				<a href="#" class="btn">Learn more</a>
 			</div>
 			<div class="slider">
-				<i class="fas fa-circle"></i>
-				<i class="fas fa-circle active"></i>
-				<i class="fas fa-circle"></i>
-				<i class="fas fa-circle"></i>
+				<span class="fas fa-circle"></span>
+				<span class="fas fa-circle active"></span>
+				<span class="fas fa-circle"></span>
+				<span class="fas fa-circle"></span>
 			</div>
 		</div>
 	</header>
 
 	<!-- / HEADER -->
-
-	<section>
+	<main>
+		<section>
 		<div class="container">
 			<div class="section-header">
 				<h2>Welcome to Zippy
@@ -53,21 +53,27 @@
 				<div class="welcome-text">This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor.</div>
 				<div class="welcome-umbrella"><img src="assets/img/svg/umbrella.svg" alt=""></div>
 			</div>
-			<div class="service">
+			<div class="grid service">
 				<div class="service-item">
-					<div class="service-img"><img src="assets/img/svg/bell.svg" alt=""></div>
+					<div class="service-img">
+						<img src="assets/img/svg/bell.svg" alt="">
+					</div>
 					 <div class="service-name">Lorem Ipsum</div>
 					 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vel odio vel felis placerat pharetra ut vitae felis. </p>
 					<a href="#" class="btn">Learn more</a>
 				</div>
 				<div class="service-item">
-					<div class="service-img"><img src="assets/img/svg/letter.svg" alt=""></div>
+					<div class="service-img">
+						<img src="assets/img/svg/letter.svg" alt="">
+					</div>
 					<div class="service-name">Dolor sit</div>
 					 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vel odio vel felis placerat pharetra ut vitae felis. </p>
 					<a href="#" class="btn">Learn more</a>
 				</div>
 				<div class="service-item">
-					<div class="service-img"><img src="assets/img/svg/drawer.svg" alt=""></div>
+					<div class="service-img">
+						<img src="assets/img/svg/drawer.svg" alt="">
+					</div>
 					<div class="service-name">Consetecure</div>
 					 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vel odio vel felis placerat pharetra ut vitae felis. </p>
 					<a href="#" class="btn">Learn more</a>
@@ -115,14 +121,14 @@
 			</div>
 	</section>
 
-	/ PROJECTS
+	<!-- / PROJECTS -->
 
 	<section>
 		<div class="container">
 			<div class="section-header projects-header">
 				<h2>Pricing table</h2>
 			</div>
-			<div class="plan">
+			<div class="grid">
 				<div class="plan-item">
 					<div class="plan-name">Standart plan</div>
 					<div class="plan-cost">Free</div>
@@ -185,7 +191,7 @@
 			<div class="section-header">
 			<h2>Zippy team</h2>
 		</div>
-		<div class="team">
+		<div class="grid">
 			<div class="team-item">
 				<img src="assets/img/team/team-1.png" alt="">
 				<h3>Sara Johnson</h3>
@@ -219,7 +225,113 @@
 		</div>
 		</div>
 	</section> 
-	<!-- TEAM -->
+	<!-- / TEAM -->
+	<section class="newsletter">
+		<div class="container">
+			<div class="section-header newsletter-header">
+			<h2>Newsletter Signup</h2>
+			</div>
+			<form class="newsletter-input">
+				<input type="email" placeholder="abc@example.com">
+				<button class="btn">Sign up</button>
+			</form>
+		</div>
+	</section>
+	<!-- / NEWSLETTER -->
+	<section>
+		<div class="container">
+			<div class="section-header">
+				<h2>Blog</h2>
+			</div>
+			<div class="grid">
+				<article class="blog-item">
+					<img src="assets/img/blog/blog-1.jpg" alt="">
+					<h3>LOREM IPSUM dolor
+					sit amet</h3>
+					<span>15 Jan, 2015</span>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vel odio vel felis placerat pharetra ut vitae felis.</p>
+					<a href="#" class="btn">Read More</a>
+				</article>
+				<article class="blog-item">
+					<img src="assets/img/blog/blog-2.jpg" alt="">
+					<h3>LOREM IPSUM dolor
+					sit amet</h3>
+					<span>15 Jan, 2015</span>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vel odio vel felis placerat pharetra ut vitae felis.</p>
+					<a href="#" class="btn">Read More</a>
+				</article>
+				<article class="blog-item">
+					<img src="assets/img/blog/blog-3.jpg" alt="">
+					<h3>LOREM IPSUM dolor
+					sit amet</h3>
+					<span>15 Jan, 2015</span>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vel odio vel felis placerat pharetra ut vitae felis.</p>
+					<a href="#" class="btn">Read More</a>
+				</article>
+			</div>
+		</div>
+	</section>
+	<!-- / BLOG -->
+	<section class="contacts">		
+			<img src="assets/img/backgrounds/background-3.jpg" alt="" class="map">
+			<div class="contacts-form">
+				<h2 class="contacts-name">Contact</h2>
+				<form id="contacts">
+				<label for="name">Name</label>
+				<input id="name" type="text" autofocus>
+				<label for="email" required>Email adress</label>
+				<input id="email" type="email">
+				<label for="subject">Subject</label>
+				<input id="subject" type="text">
+				<label for="message">Message</label>
+				<textarea id="message"></textarea>
+				</form>
+				<button class="btn" form="contacts">Send</button>
+			</div>
+			
+	</section>
+	<!-- / CONTACTS -->
+	<footer>
+		<div class="container">
+			<div class="grid">
+			<div class="footer-item">
+				<span class="footer-name">Offline address</span>
+				<p>Lorem ipsum dolor, 234</p>
+				<p>1200 Consecture</p>
+				<p>Adipsching</p>
+			</div>
+			<div class="footer-item">
+				<span class="footer-name">Follow us</span>
+				<div class="footer-links">
+					<a href="#">
+						<span class="fab fa-behance"></span>
+					</a>
+					<a href="#"><span class="fab fa-twitter"></span></a>
+					<a href="#">
+						<span class="fab fa-linkedin-in"></span>
+					</a>
+					<a href="#">
+						<span class="fab fa-facebook-f"></span>
+					</a>
+					<a href="#">
+						<span class="fab fa-google-plus-g"></span>
+					</a>
+					<a href="#">
+						<span class="fab fa-telegram-plane"></span>
+					</a>
+				</div>
+			</div>
+			<div class="footer-item">
+				<span class="footer-name">Contact us</span>
+				<p>+ 123 456 789</p>
+				<p>zippy@skype</p>
+				<p>enquiry@zippy.com</p>
+			</div>
+		</div>
+		</div>
+	</footer>
+	</main>
+	
 
 
 
