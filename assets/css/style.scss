@@ -66,7 +66,7 @@ li {
 
 .grid {
 	display: grid;
-	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
 	grid-row-gap: 65px;
 	grid-column-gap: 8px;
 	// margin: 0 -15px;
@@ -198,6 +198,7 @@ header {
 			font-family: $monbold;
 			color: $pur;
 			text-transform: uppercase;
+
 		}
 		
 		p {
@@ -444,6 +445,14 @@ header {
 
 	.blog-item {
 		text-align: center;
+
+		.btn{
+			@include btn(black, #ececec);
+
+			&:hover {
+				@include btn(black, $yel);
+			}
+		}
 		
 		img {
 			margin-bottom: 1.5em;
@@ -460,7 +469,6 @@ header {
 			color: #a3a3aa;
 			font-size: 13px;
 			font-family: $hel;
-
 		}
 		p {
 			margin: 0 18px 1.5em 18px;

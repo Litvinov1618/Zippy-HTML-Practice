@@ -41,8 +41,7 @@ li {
 .grid {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 1fr 1fr;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
   grid-row-gap: 65px;
   grid-column-gap: 8px; }
 
@@ -369,6 +368,38 @@ ul {
 
 .blog-item {
   text-align: center; }
+  .blog-item .btn {
+    background-color: #ececec;
+    color: black;
+    display: inline-block;
+    padding: 15px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+    font-size: 11px;
+    text-align: center;
+    text-decoration: none;
+    -webkit-transition: background-color 0.2s linear, color 0.2s linear;
+    -o-transition: background-color 0.2s linear, color 0.2s linear;
+    transition: background-color 0.2s linear, color 0.2s linear;
+    font-family: "MontserratBold", sans-serif;
+    border: none;
+    cursor: pointer; }
+    .blog-item .btn:hover {
+      background-color: #ffe26d;
+      color: black;
+      display: inline-block;
+      padding: 15px 13px;
+      border-radius: 3px;
+      text-transform: uppercase;
+      font-size: 11px;
+      text-align: center;
+      text-decoration: none;
+      -webkit-transition: background-color 0.2s linear, color 0.2s linear;
+      -o-transition: background-color 0.2s linear, color 0.2s linear;
+      transition: background-color 0.2s linear, color 0.2s linear;
+      font-family: "MontserratBold", sans-serif;
+      border: none;
+      cursor: pointer; }
   .blog-item img {
     margin-bottom: 1.5em; }
   .blog-item h3 {
