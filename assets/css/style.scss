@@ -38,7 +38,7 @@ $hel: 'Helvetica', sans-serif;
 
 @mixin img {
 	height: auto;
-	width: 100%;
+	max-width: 100%;
 }
 
 
@@ -57,7 +57,7 @@ $hel: 'Helvetica', sans-serif;
 	width: 100%;
 	max-width: 700px;
 	margin: 0 auto;
-	padding: 0 8px;
+	padding: 0 15px;
 }
 
 li {
@@ -69,7 +69,7 @@ li {
 	grid-template-columns: 1fr 1fr 1fr;
 	grid-row-gap: 65px;
 	grid-column-gap: 8px;
-	margin: 0 -8px;
+	// margin: 0 -15px;
 }
 .btn {
 	@include btn(black, $yel);
@@ -321,7 +321,8 @@ header {
 
 	video {
 		outline: none;
-		width: 688px;
+		width: 100%;
+		max-width: 688px;
 		height: 460px;
 	}
 	.video-title {
@@ -340,13 +341,23 @@ header {
 
 .team-item {
     text-align: center;
+   
+
+	.img-item {
+		width: 173px;
+		height: 173px;
+		border-radius: 100px;
+		background-color: $pur;	
+		margin: 0 auto 30px auto;
+		position: relative;
+
+	}
 
     img
     {
-        max-width: 178px;
-        margin-bottom: 30px;
-
-        @include img;
+    	@include img;
+    	border-radius: 100px;
+    	transition: opacity 0.2s linear;
     }
 
     h3
@@ -368,6 +379,35 @@ header {
     }
 }
 
+.img-item-text {
+	left: 0;
+	top: 50%;
+	transform: translateY(-50%);
+	position: absolute;
+	width: 100%;
+	text-align: center;
+	opacity: 0;
+	transition: opacity 0.2s linear;
+
+
+	a {
+		@include link;
+	}
+	a + a {
+		margin-left: 10px;
+	}
+	span {
+		font-family: "Font Awesome 5 Brands";
+		color: white;
+		font-size: 32px;
+	}	
+}
+.team-item:hover  img{
+	opacity: 0.2;
+}
+.team-item:hover .img-item-text {
+	opacity: 1;
+}
 // NEWSLETTER
 .newsletter {
 	background: url('../img/backgrounds/background-2.jpg') center no-repeat;
@@ -414,7 +454,7 @@ header {
 			font-family: $monbold;
 			font-size: 15px;
 		}
-		span {
+		time {
 			margin-bottom: 1em;
 			display: inline-block;
 			color: #a3a3aa;
@@ -459,7 +499,8 @@ header {
 
 		input {
 			margin-bottom: 20px;
-			width: 50%;
+			width: 100%;
+			max-width: 309px;
 			height: 42px;
 			font-size: 15px;
 			border: none;
@@ -473,7 +514,8 @@ header {
 			outline: none;
 			padding: 16px;
 			font-size: 16px;
-			width: 50%;
+			width: 100%;
+			max-width: 309px;
 			height: 145px;
 			margin-bottom: 15px;
 			font-family: $hel;
@@ -493,6 +535,8 @@ header {
 	}
 	.map {
 		width: 50%;
+		background: url('../img/backgrounds/background-3.jpg') center no-repeat;
+		background-size: cover;
 	}
 }
 
