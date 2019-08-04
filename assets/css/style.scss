@@ -66,7 +66,7 @@ li {
 
 .grid {
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+	grid-template-columns: repeat(auto-fill, minmax(210px, 2fr));
 	grid-row-gap: 65px;
 	grid-column-gap: 8px;
 	// margin: 0 -15px;
@@ -78,6 +78,16 @@ li {
 		@include btn(white, $pur);
 	}
 }
+
+.flex {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+.flex-item {
+	width: calc(100%/3);
+}
+
 // HEADER
 header {
 	height: 100vh;
@@ -114,7 +124,8 @@ header {
 
 
 .header-inner {
-	width: 490px;
+	max-width: 490px;
+	width: 100%;
 	
 	// margin-top: 132px;
 	color: white;
@@ -174,6 +185,7 @@ header {
 		font-size: 30px;
 		font-family: $robthin;
 		width: 420px;
+		vertical-align: middle;
 	}
 	
 	.welcome-umbrella img{
@@ -230,10 +242,13 @@ header {
 
 .projects {
 	display: flex;
-
+	flex-wrap: wrap;
+}
 	.project-item {
-		width: 25%;
+		// width: 25%;
+		flex: 1 1 0;
 		background-color: #efefef;
+
 
 		img {
 			width: 100%;
@@ -271,7 +286,7 @@ header {
 			}
 		}
 	}
-}
+
 // PLAN
 
 	.plan-item {
@@ -324,7 +339,7 @@ header {
 		outline: none;
 		width: 100%;
 		max-width: 688px;
-		height: 460px;
+		height: auto;
 	}
 	.video-title {
 		font-size: 11px;
@@ -489,12 +504,12 @@ header {
 	.contacts-form {
 		width: 50%;
 		background-color: $yel;
-		padding: 50px 47px;
+		padding: 40px;
 		
-		.contacts-name {
+		h2 {
 			font-family: $monbold;
 			font-size: 44px;
-			margin-bottom: 33px;
+			margin-bottom: 13px;
 		}
 
 		label {
@@ -525,16 +540,19 @@ header {
 			width: 100%;
 			max-width: 309px;
 			height: 145px;
-			margin-bottom: 15px;
 			font-family: $hel;
 		}
 		
 		.btn {
 			border-radius: 0;
-			width: 50%;
+			width: 100%;
+			max-width: 309px;
 			background-color: $pur;
 			color: white;
 			outline: none;
+			margin: 20px 0;
+			
+			
 			&:hover {
 				background-color: darken($pur, 15%);
 
@@ -551,7 +569,7 @@ header {
 // FOOTER
 .footer-item {
 	text-align: center;
-	margin-top: 80px;
+	padding-top: 80px;
 
 	.footer-name {
 		margin-bottom: 25px;
@@ -582,6 +600,85 @@ header {
 	}
 		
 }
+@media (max-width: 1000px) {
+
+}
+
+@media (max-width: 768px) {
+	.flex-item {
+		width: 40%;
+		margin-bottom: 50px;
+
+		p {
+			width: 130px;
+			margin: 0 auto 10px auto;
+		}
+	}
+	.flex-item:last-child {
+		width: 100%;
+	}
+	.flex {
+		justify-content: space-evenly;
+	}
+	.grid {
+		grid-row-gap: 25px;
+	}
+	.project-item {
+		flex: none;
+		width: 50%;
+	}
+	.plan-item + .plan-item {
+		border: 0;
+	}
+	.map {
+		display: none;
+	}
+	.contacts .contacts-form {
+		width: 100%;
+		text-align: center;
+		height: 100vh;
+		padding: 20px;
+	}
+	
+	 .welcome-content .welcome-text {
+		font-size: 20px;
+	}
+	* {
+		h2 {
+			font-size: 1em;
+		}
+	}
+}
 
 
+@media (max-width: 480px) {
+	.flex-item {
+		width: 100%;
+	}
+	
+	.project-item .item-text{
+		padding: 1em;
+	}
+	.footer-item:not(:first-child) {
+		padding-top: 0;
+	}
+	.footer-item {
+		margin-bottom: 0;
+	}
+	.footer-item+.footer-item:before {
+		content: "";
+		height: 1px;
+		width: 30%;
+		background-color: grey;
+		display: block;
+		margin: 20px auto;
+		opacity: 0.5;
 
+	}
+
+}
+@media (max-width: 320px){
+	.project-item {
+		width: 100%;
+	}
+}
