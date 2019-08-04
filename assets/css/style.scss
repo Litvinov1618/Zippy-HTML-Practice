@@ -662,10 +662,10 @@ header {
 	.footer-item:not(:first-child) {
 		padding-top: 0;
 	}
-	.footer-item {
+	.flex-item {
 		margin-bottom: 0;
 	}
-	.footer-item+.footer-item:before {
+	.flex-item+.flex-item:before {
 		content: "";
 		height: 1px;
 		width: 30%;
