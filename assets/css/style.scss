@@ -203,17 +203,17 @@ header {
 	border-bottom: 2px solid #e7e7e7;
 	padding-bottom: 58px;
 }
-	.service-item {
-		text-align: center;
-		padding: 0 3em;
-		
-		p {
-			margin-bottom: 35px;
-			font-family: $hel;
-			font-size: 13px;
-			color: #a3a3a3; 	
-		}	
-	}
+.service-item {
+	text-align: center;
+	padding: 0 3em;
+	
+	p {
+		margin-bottom: 35px;
+		font-family: $hel;
+		font-size: 13px;
+		color: #a3a3a3; 	
+	}	
+}
 .service-name {
 	margin-bottom: 30px;
 	font-size: 14px;
@@ -468,6 +468,7 @@ header {
 		
 		img {
 			margin-bottom: 1.5em;
+			@include img;
 		}
 
 		h3 {
@@ -608,11 +609,15 @@ header {
 	.flex-item {
 		width: 40%;
 		margin-bottom: 50px;
-
 		p {
-			width: 130px;
-			margin: 0 auto 10px auto;
+			
+			margin: 0 auto 20px auto;
+			max-width: 208px;
 		}
+
+	}
+	.service-item {
+		padding: 0 1em;
 	}
 	.flex-item:last-child {
 		width: 100%;
@@ -627,6 +632,10 @@ header {
 		flex: none;
 		width: 50%;
 	}
+	.plan-item,
+	.plan-item:last-child {
+		width: calc(100%/3);
+	}
 	.plan-item + .plan-item {
 		border: 0;
 	}
@@ -640,7 +649,7 @@ header {
 		padding: 20px;
 	}
 	
-	 .welcome-content p {
+	.welcome-content p {
 		font-size: 30px;
 		width: 100%;
 		text-align: center;
@@ -653,6 +662,7 @@ header {
 	}
 	.mobile-link span{
 		display: inline;
+		cursor: pointer;
 	}
 }
 
@@ -664,6 +674,10 @@ header {
 	}
 	.flex-item {
 		width: 100%;
+
+		p {
+			width: 208px;
+		}
 	}
 	.project-item .item-text{
 		padding: 1em;
@@ -686,8 +700,9 @@ header {
 		margin: 20px auto;
 		opacity: 0.5;
 	}
-	.btn {
-		padding: 12px 10px;
+	.btn,
+	.btn:hover {
+		padding: 12px 10px;	
 	}
 	// VIDEO
 	.video-header {

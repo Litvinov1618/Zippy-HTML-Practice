@@ -434,7 +434,9 @@ header {
       border: none;
       cursor: pointer; }
   .blog-item img {
-    margin-bottom: 1.5em; }
+    margin-bottom: 1.5em;
+    height: auto;
+    max-width: 100%; }
   .blog-item h3 {
     margin: 0 18px 1em 18px;
     font-family: "MontserratBold", sans-serif;
@@ -540,8 +542,10 @@ header {
     width: 40%;
     margin-bottom: 50px; }
     .flex-item p {
-      width: 130px;
-      margin: 0 auto 10px auto; }
+      margin: 0 auto 20px auto;
+      max-width: 208px; }
+  .service-item {
+    padding: 0 1em; }
   .flex-item:last-child {
     width: 100%; }
   .flex {
@@ -555,6 +559,9 @@ header {
     -ms-flex: none;
     flex: none;
     width: 50%; }
+  .plan-item,
+  .plan-item:last-child {
+    width: calc(100%/3); }
   .plan-item + .plan-item {
     border: 0; }
   .map {
@@ -572,13 +579,16 @@ header {
   .menu-link {
     display: none; }
   .mobile-link span {
-    display: inline; } }
+    display: inline;
+    cursor: pointer; } }
 
 @media (max-width: 480px) {
   .section-header {
     margin: 35px auto; }
   .flex-item {
     width: 100%; }
+    .flex-item p {
+      width: 208px; }
   .project-item .item-text {
     padding: 1em; }
   .footer-item {
@@ -595,7 +605,8 @@ header {
     display: block;
     margin: 20px auto;
     opacity: 0.5; }
-  .btn {
+  .btn,
+  .btn:hover {
     padding: 12px 10px; }
   .video-header {
     padding-top: 20px; }
