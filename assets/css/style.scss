@@ -41,9 +41,6 @@ $hel: 'Helvetica', sans-serif;
 	max-width: 100%;
 }
 
-
-// CSS
-
 // BASIC CSS
 *,
 *:before,
@@ -53,6 +50,7 @@ $hel: 'Helvetica', sans-serif;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
+
 .container {
 	width: 100%;
 	max-width: 700px;
@@ -64,19 +62,22 @@ li {
 	list-style: none;
 }
 
-.grid {
-	display: grid;
-	grid-template-columns: repeat(auto-fill, minmax(210px, 2fr));
-	grid-row-gap: 65px;
-	grid-column-gap: 8px;
-	// margin: 0 -15px;
-}
-.btn {
-	@include btn(black, $yel);
+.grid{
+    display: grid;
 
-	&:hover {
-		@include btn(white, $pur);
-	}
+    grid-template-columns: repeat(auto-fill, minmax(210px, 2fr));
+    grid-row-gap: 65px;
+    grid-column-gap: 8px;
+}
+
+.btn
+{
+    @include btn(black, $yel);
+
+    &:hover
+    {
+        @include btn(white, $pur);
+    }
 }
 
 .flex {
@@ -84,10 +85,14 @@ li {
 	justify-content: space-between;
 	flex-wrap: wrap;
 }
+
 .flex-item {
 	width: calc(100%/3);
 }
 
+address {
+	font-style: normal;
+}
 // HEADER
 header {
 	height: 100vh;
@@ -101,33 +106,33 @@ header {
 	padding-top: 40px;
 	color: #fff;
 	text-transform: uppercase;
-	font-family: $monbold;
+	font-family: $monbold;	
+}
+.logo {
+	font-size: 30px;
+	font-weight: bold;
+}
+.menu-link {
+	@include link;
+	margin-right: 20px;
+	font-size: 13px;
+	transition: color 0.2s linear;
 	
-	.logo {
-		font-size: 30px;
-		font-weight: bold;
-
-
-	}
-	.menu a {
-		@include link;
-		margin-right: 20px;
-		font-size: 13px;
-		transition: color 0.2s linear;
-		
-		&:hover {
-			color: $yel;
-		}
+	&:hover {
+		color: $yel;
 	}
 }
 
-
+.mobile-link span{
+	
+	display: none;
+	color: white;
+	text-decoration: none;
+}
 
 .header-inner {
 	max-width: 490px;
 	width: 100%;
-	
-	// margin-top: 132px;
 	color: white;
 
 	h1 {
@@ -141,32 +146,28 @@ header {
 		font-family: $robthin;
 	}
 }
-.slider {
-	// position: absolute;
-	// left: 7px;
-	// bottom: 38px;
-	padding-bottom: 40px;
 
-	
-	.fa-circle {
-		color: white;
-		font-size: 7px;
-		opacity: 0.5;
-		cursor: pointer;
-	}
-	.active {
-			opacity: 1;
-		}
+.slider {
+	padding-bottom: 40px;
+}
+.fa-circle {
+	color: white;
+	font-size: 7px;
+	opacity: 0.5;
+	cursor: pointer;
+}
+.active {
+		opacity: 1;
 }
 
 .container-header {
-	// position: relative;
 	height: 100vh;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
 
 }
+
 
 // WELCOME TO ZIPPY
 .section-header {
@@ -180,92 +181,87 @@ header {
 	display: flex;
 	justify-content: space-between;
 	margin-bottom: 75px; 
-	
-	.welcome-text {
+
+	p {
 		font-size: 30px;
 		font-family: $robthin;
 		width: 420px;
 		vertical-align: middle;
 	}
+}
+
+
 	
-	.welcome-umbrella img{
-		width: 100%;
-		max-width: 188px;
-		height: auto;
-	}
+.welcome-umbrella img {
+	width: 100%;
+	max-width: 188px;
+	height: auto;
 }
 
 .service {
 
 	border-bottom: 2px solid #e7e7e7;
 	padding-bottom: 58px;
-	
+}
 	.service-item {
 		text-align: center;
 		padding: 0 3em;
-		
-		.service-name {
-			margin-bottom: 30px;
-			font-size: 14px;
-			font-family: $monbold;
-			color: $pur;
-			text-transform: uppercase;
-
-		}
 		
 		p {
 			margin-bottom: 35px;
 			font-family: $hel;
 			font-size: 13px;
 			color: #a3a3a3; 	
-		}
-		
-		.service-img {
-			
-			margin: 0 auto 35px auto;
-
-			background-color: $pur;
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			width: 80px;
-			border-radius: 50px;
-			height: 80px;
-		}
+		}	
 	}
+.service-name {
+	margin-bottom: 30px;
+	font-size: 14px;
+	font-family: $monbold;
+	color: $pur;
+	text-transform: uppercase;
+}
+.service-img {
+		
+	margin: 0 auto 35px auto;
+
+	background-color: $pur;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 80px;
+	border-radius: 50px;
+	height: 80px;
 }
 
+
 // PROJECTS
-.projects-header {
-		margin: 60px 47px;
-	}
+
 
 .projects {
 	display: flex;
 	flex-wrap: wrap;
 }
-	.project-item {
-		// width: 25%;
-		flex: 1 1 0;
-		background-color: #efefef;
+.project-item {
+	flex: 1 1 0;
+	background-color: #efefef;
 
+	img {
+		width: 100%;
+		height: auto;
+		display: block;
+	}
+	
+	.item-text {
+		padding: 2.5em;
+		transition: background-color 0.2s linear;
 
-		img {
-			width: 100%;
-			height: auto;
-			display: block;
-		}
-		
-		.item-text {
-			padding: 2.5em;
-			transition: background-color 0.2s linear;
-
-			&:hover
-			{
+			&:hover {
 				background-color: $yel;
 				cursor: pointer;
 			}
-			&:hover .btn{
+
+			&:hover .btn {
 				background-color: $pur;
 				color: white;
 			}
@@ -284,39 +280,42 @@ header {
 				font-family: $hel;
 				color: #878787;
 			}
-		}
 	}
+}
 
 // PLAN
 
-	.plan-item {
-		text-align: center;
-
-		.btn {
-			padding: 9px 29px;
-		}
+.plan-item {
+	text-align: center;
+		
+	li {
+		font-size: 13px;
+		font-family: $hel;
+		margin-bottom: 12px;
 	}
-		.plan-item + .plan-item {
-			border-left: 2px solid #e7e7e7;
-		}
-		.plan-name {
-			font-family: $monbold;
-			font-size: 15px;
-			margin-bottom: 22px;
-		}
-		.plan-cost {
-			font-family: $mon;
-			color: #9d9d9d;
-			margin-bottom: 23px;
-		}
-		li {
-			font-size: 13px;
-			font-family: $hel;
-			margin-bottom: 12px;
-		}
-		ul {
-		margin-bottom: 27px;
-		}
+
+	ul {
+	margin-bottom: 27px;
+	}
+
+	.btn {
+		padding: 9px 29px;
+	}
+	}
+.plan-item + .plan-item {
+	border-left: 2px solid #e7e7e7;
+}
+.plan-name {
+	font-family: $monbold;
+	font-size: 15px;
+	margin-bottom: 22px;
+}
+.plan-cost {
+	font-family: $mon;
+	color: #9d9d9d;
+	margin-bottom: 23px;
+}
+		
 		
 	
 
@@ -325,21 +324,19 @@ header {
 
 .video-sec {
 	background-color: $pur;
-
-	
 	width: 100%;
-
-	.video-header {
-		color: white;
-		padding-top: 90px;
-		margin-bottom: 50px;
-	}
 
 	video {
 		outline: none;
 		width: 100%;
 		max-width: 688px;
 		height: auto;
+	}
+}
+	.video-header {
+		color: white;
+		padding-top: 90px;
+		margin-bottom: 50px;
 	}
 	.video-title {
 		font-size: 11px;
@@ -349,7 +346,7 @@ header {
 		margin: 25px 0 110px 0;
 		display: inline-block;
 	}
-}
+
 
 // TEAM
 
@@ -499,12 +496,13 @@ header {
 .contacts {
 	display: flex;
 	margin-top: 5em;
-	height: 653px;
 
 	.contacts-form {
 		width: 50%;
 		background-color: $yel;
 		padding: 40px;
+
+
 		
 		h2 {
 			font-family: $monbold;
@@ -550,8 +548,7 @@ header {
 			background-color: $pur;
 			color: white;
 			outline: none;
-			margin: 20px 0;
-			
+			margin-top: 20px;			
 			
 			&:hover {
 				background-color: darken($pur, 15%);
@@ -563,6 +560,7 @@ header {
 		width: 50%;
 		background: url('../img/backgrounds/background-3.jpg') center no-repeat;
 		background-size: cover;
+
 	}
 }
 
@@ -600,11 +598,13 @@ header {
 	}
 		
 }
-@media (max-width: 1000px) {
-
-}
 
 @media (max-width: 768px) {
+	* {
+		h2 {
+			font-size: 1em;
+		}
+	}
 	.flex-item {
 		width: 40%;
 		margin-bottom: 50px;
@@ -636,28 +636,40 @@ header {
 	.contacts .contacts-form {
 		width: 100%;
 		text-align: center;
-		height: 100vh;
+
 		padding: 20px;
 	}
 	
-	 .welcome-content .welcome-text {
-		font-size: 20px;
+	 .welcome-content p {
+		font-size: 30px;
+		width: 100%;
+		text-align: center;
 	}
-	* {
-		h2 {
-			font-size: 1em;
-		}
+	img[alt="Umbrella image"] {
+		display: none;
+	}
+	.menu-link {
+		display: none;
+	}
+	.mobile-link span{
+		display: inline;
 	}
 }
 
 
 @media (max-width: 480px) {
+	// BASIC CSS
+	.section-header {
+		margin: 35px auto;
+	}
 	.flex-item {
 		width: 100%;
 	}
-	
 	.project-item .item-text{
 		padding: 1em;
+	}
+	.footer-item {
+		padding-top: 40px;
 	}
 	.footer-item:not(:first-child) {
 		padding-top: 0;
@@ -673,8 +685,26 @@ header {
 		display: block;
 		margin: 20px auto;
 		opacity: 0.5;
-
 	}
+	.btn {
+		padding: 12px 10px;
+	}
+	// VIDEO
+	.video-header {
+		padding-top: 20px;
+	}
+	.video-title {
+		margin-bottom: 40px;
+	}
+	// WELCOME
+	.welcome-content p {
+		font-size: 25px;
+		text-align: center;
+	}
+	.welcome-content {
+		margin-bottom: 45px;
+	}
+	
 
 }
 @media (max-width: 320px){
